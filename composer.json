@@ -50,6 +50,7 @@
     "prefer-stable": true,
     "scripts": {
         "post-update-cmd": [
+            "composer install ",
             "php artisan clear-compiled",
             "php artisan optimize"
           ],
