@@ -50,12 +50,12 @@
     "prefer-stable": true,
     "scripts": {
         "post-update-cmd": [
+            "composer install --prefer-dist --no-progress --no-suggest --no-interaction",
             "php artisan clear-compiled",
             "php artisan optimize"
           ],
           "post-install-cmd": [
-            "chmod -R 777 public/",
-            "composer install"
+            "chmod -R 777 public/"
         ]
     }
 }
